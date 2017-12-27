@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.8.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -18,39 +18,40 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        
+
         	<!-- marked the embedded servlet container as provided -->
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-tomcat</artifactId>
-		<scope>provided</scope>
+		<!--<scope>provided</scope>-->
 	</dependency>
-        
-        
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+
+        </dependency>
          <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
-        
-        
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        
+
         <!-- Use MySQL Connector-J -->
-        
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
     <properties>
@@ -66,5 +67,15 @@
         </plugins>
     </build>
 
-    <packaging>war</packaging>
+
 </project>
+<!--<dependency>-->
+<!--<groupId>mysql</groupId>-->
+<!--<artifactId>mysql-connector-java</artifactId>-->
+<!--</dependency>-->
+
+<!--<dependency>-->
+<!--<groupId>org.springframework.boot</groupId>-->
+<!--<artifactId>spring-boot-starter-test</artifactId>-->
+<!--<scope>test</scope>-->
+<!--</dependency>-->
